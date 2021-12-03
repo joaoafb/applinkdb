@@ -1,0 +1,37 @@
+function adicionarquarta(){
+    var inputSequencia = document.querySelector("#inputSequencia")
+    var inputMateria = document.querySelector("#inputMateria")
+    var inputLink = document.querySelector("#inputLink")
+    var inputHorariop = document.querySelector("#inputHorariop")
+    var inputHorarios = document.querySelector("#inputHorarios")
+    var inputProf = document.querySelector("#inputProf")
+
+    localStorage.setItem("sequencia", inputSequencia.value)
+    localStorage.setItem("materia", inputMateria.value)
+    localStorage.setItem("link", inputLink.value)
+    localStorage.setItem("horariop", inputHorariop.value)
+    localStorage.setItem("horarios", inputHorarios.value)
+    localStorage.setItem("prof", inputProf.value)
+
+
+    // Add a new document in collection "cities"
+db.collection("").doc(inputMateriat.value).set({
+    sequencia: localStorage.getItem("sequencia"),
+    materia: localStorage.getItem("materia"),
+    link: localStorage.getItem("link"),
+    horariop: localStorage.getItem("horariop"),
+    horarios: localStorage.getItem("horarios"),
+    prof: localStorage.getItem("prof"),
+    data: str_data + ' às ' + str_hora,
+    administrador: localStorage.getItem("administrador")
+
+})
+.then(() => {
+    alert("Aula Inserida Com Sucesso!")
+    location.reload()
+})
+.catch((error) => {
+    alert("Falha ao Inserir a Aula!", error)
+});
+
+}

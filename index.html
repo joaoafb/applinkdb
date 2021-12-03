@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <link rel="icon" type="image/x-icon" href="assents/img/logoapp.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Heebo&family=Outfit:wght@600&family=PT+Sans+Narrow&family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Links</title>
+    <link rel="stylesheet" href="assents/css/style.css">
+</head>
+<body>
+
+<!--DIV SEJA BEM VINDO-->
+<div  class="box" id="divbemvindo"><br>
+    <img src="assents/img/logoapp.png" alt="">
+    <h1>Olá, Seja Bem Vindo(a)<br> <span style="font-size: 15pt;color: rgb(218, 218, 218);">a Nova Versão do App Link!</span> </h1><br><br>
+    <button onclick="next()" id="btncenter" >Continuar</button>
+</div>
+<!--DIV FORMULARIO-->
+
+
+<div id="box1" class="box">
+    <h1>Qual Seu Curso Técnico?</h1>
+<br>
+    <div>
+    
+      <button  id="btnadm" class="btnentrar">Administração</button><hr>
+      <button  id="btnseg" class="btnentrar">Seg. no Trabalho</button>
+    </div>
+</div>
+<div id="box2" class="box">
+    <h1>Qual Ano Cursa?</h1>
+  <br>
+    <div>
+    
+      <button onclick="primeiroano()" id="primeiroano"class="btnentrar">1º Ano</button><hr>
+      <button class="btnentrar" onclick="segundoano()">2º Ano</button><hr>
+      <button class="btnentrar" onclick="terceiroano()">3º Ano</button><hr>
+    </div>
+  </div>
+  
+  
+  <!--BOX 3-->
+  
+  <div id="box3" class="box">
+    <h1>Qual o Seu Nome</h1>
+    <span id="alert" style="color: red;font-size: 12pt;margin-left: 14px;float: left;">Digite Alguma Coisa!</span>
+  <br>
+    <div>
+    
+      <input required autocomplete="off" type="text"style="width:90%;margin:0 auto;margin-bottom:20px;" class="form-control" id="inputnome" placeholder="Digite Aqui" aria-describedby="emailHelp">
+      <input id="submit" type="submit" class="btngeral" value="Terminar"><hr>
+    </div>
+  </div>
+
+
+
+   <!--BOX 4-->
+  
+   <div id="box4" class="box">
+   
+  </div>
+    <!--MENU-->
+    <div id="divmenu" class="boxmenu">
+        
+        <button onclick="home()" id="btn1" class="btnmenu"><i id="btnhome" class="fas fa-home"></i></button>
+       
+  
+        <button onclick="reoferta()" class="btnmenu"><i id="btnreoferta" class="fas fa-chalkboard-teacher"></i></button>
+
+        <button onclick="login()" class="btnmenu"> <i id="btadm" class="fas fa-user-shield"></i></button>
+        
+        <button onclick="config()"  class="btnmenu"> <i id="btnmenu" class="fas fa-cog"></i></button>
+      </div>
+
+
+      <!--DIV HOME-->
+<div id="divhome" class="box">
+    <img src="assents/img/logoapp.png" alt="">
+      <h1>Selecione o Dia</h1>
+      <br>
+              <div>
+              
+                <button onclick="aulassegunda()" class="btndias">Segunda-Feira</button>
+                <button onclick="aulasterca()" class="btndias">Terça-Feira</button>
+                <button onclick="aulasquarta()" class="btndias">Quarta-Feira</button>
+                <button onclick="aulasquinta()" class="btndias">Quinta-Feira</button>
+                <button onclick="aulassexta()" class="btndias">Sexta-Feira</button>
+               
+                <button id="btnterca" style="margin-bottom: 0;" class="btndias">REOFERTAS</button>
+              </div>
+          </div>
+
+          <!--DIV CONFIG-->
+
+          <div id="divconfig" class="box">
+            <h1>Configurações</h1>
+    <br>
+            
+       
+       
+    
+          <img width="100px" src="assents/img/user.png" alt=""><br><br>
+          <div class="box2">
+            <label for="">Nome:</label><span id="exibirnome">ERRO NO NOME</span>
+            
+               <label for="">Turma</label><span id="exibirano">ERRO NOS DADOS</span>
+          </div><hr>
+         </div>
+      
+    
+   
+
+        
+      <!--DIV REOFERTA-->
+<div id="divreoferta" class="box">
+  <img src="assents/img/logoapp.png" alt="">
+    <h1>Selecione o Dia</h1>
+    <br>
+            <div>
+            
+              <button  class="btndias">Segunda-Feira</button>
+              <button  class="btndias">Terça-Feira</button>
+              <button  class="btndias">Quarta-Feira</button>
+              <button class="btndias">Quinta-Feira</button>
+              <button  class="btndias">Sexta-Feira</button>
+             
+            
+            </div>
+        </div>
+
+
+
+
+
+         <!--DIV HLOGIN-->
+<div id="divlogin" class="box">
+  <img src="assents/img/logoapp.png" alt="">
+    <h1>Faça o Login</h1>
+    <br>  
+    <form action="/" onclick="return false;">
+    
+      <label for="" class="inputlabel2">Seu Usuario</label><br>
+      <input class="input2" id="inputuser" type="text" placeholder="Digite Seu Usuario" autocomplete="off">
+      <br>
+      <label class="inputlabel2" for="">Sua Senha</label><br>
+      <input class="input2" id="inputpass" type="password" placeholder="Digite Sua Senha" autocomplete="off">
+<br><br>
+
+      <button onclick="logar()" type="submit" class="btn btn-sucess">Entrar</button>
+  
+
+  
+
+     
+  </form>
+        </div>
+
+
+<!--DIV SEGUNDA FEIRA-->
+
+<div id="divsegunda" class="box"><h1>Selecione a Aula</h1>
+  <hr>
+
+  <!--AULA1-->
+  <div class="aula">
+    <h1 id="materia1segunda">Ninguem Adicionou Nada Ainda!</h1>
+    <span id="horariop1segunda" style="color: white;">00:00 as 00:00</span>
+    <span id="horarios1segunda" style="color: white;">00:00 as 00:00</span>
+    <span id="prof1segunda" style="color: white;">Prof:</span>
+    <button onclick="entrarsegunda1()" style="margin: 0 auto; width: 60%;margin-bottom: 15px;margin-top: 15px;">Entrar</button>
+    <button id="share1segunda" style="margin: 0 auto;; width: 60%;">Compartilhar</button>
+  </div><br>
+
+
+
+
+</body>
+<script src="https://kit.fontawesome.com/d3c038606f.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="assents/js/menu.js"></script>
+<script src="assents/js/form.js"></script>
+<script src="backend/login/login.js"></script>
+<script src="assents/js/locastorage.js"></script>
+<script src="assents/js/aulas.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script>
+  // Obtém a data/hora atual
+var data = new Date();
+
+// Guarda cada pedaço em uma variável
+var dia     = data.getDate();           // 1-31
+var dia_sem = data.getDay();            // 0-6 (zero=domingo)
+var mes     = data.getMonth();          // 0-11 (zero=janeiro)
+var ano2    = data.getYear();           // 2 dígitos
+var ano4    = data.getFullYear();       // 4 dígitos
+var hora    = data.getHours();          // 0-23
+var min     = data.getMinutes();        // 0-59
+var seg     = data.getSeconds();        // 0-59
+var mseg    = data.getMilliseconds();   // 0-999
+var tz      = data.getTimezoneOffset(); // em minutos
+
+// Formata a data e a hora (note o mês + 1)
+var str_data = dia + '/' + (mes+1) + '/' + ano4;
+var str_hora = hora + ':' + min + ':' + seg;
+
+// Mostra o resultado
+  firebase.initializeApp({
+  apiKey: "AIzaSyDXHvfayFRmifampkbu1YXBuqk5iT7bEA0",
+  authDomain: "applinks-c0524.firebaseapp.com",
+  databaseURL: "https://applinks-c0524-default-rtdb.firebaseio.com",
+  projectId: "applinks-c0524",
+  storageBucket: "applinks-c0524.appspot.com",
+  messagingSenderId: "1097483088469",
+  appId: "1:1097483088469:web:123efba980a97acbb05adc",
+  measurementId: "G-N1VTX2TLJM"
+});
+
+var db = firebase.firestore();
+
+function cadUser(){
+    db.collection("usuarios").doc(localStorage.getItem("nome")).set({
+            
+        'ano': localStorage.getItem("ano"),
+        'nome': localStorage.getItem("nome"),
+        'turma': localStorage.getItem("curso"),
+        'hora': str_data + ' às ' + str_hora
+      })
+      .then((docRef) => {
+          console.log("Dado Inserido Com Sucesso! ID:", docRef.id);
+          
+      })
+      .catch((error) => {
+          console.error("Erro ao Inserir os Dados! Erro: ", error);
+      });
+
+}
+
+</script>
+</body>
+</html>
+</html>
